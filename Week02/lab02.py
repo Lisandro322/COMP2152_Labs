@@ -1,6 +1,8 @@
 #This is the python file for the Week 02
 import random
-def RockPaperSissors():
+
+#This is the Code for the RockPaperScissors Game
+def RockPaperScissors():
     options = ["Rock","Paper","Scissors"]
     playerChoice = input("Press 1 for Rock\nPress 2 for Paper\nPress 3 for Scissors\n: ")
     playerChoice = int(playerChoice)
@@ -15,25 +17,33 @@ def RockPaperSissors():
         else:
             if(playerChoice == "Rock"):
                 if(gameChoice == "Paper"):
-                    print(f"Game Wins: Player chose {playerChoice}, Game chose {gameChoice}\n")
+                    whoWon(playerChoice,gameChoice, 1)
                 else:
-                    print(f"Player wins: Player chose {playerChoice}, Game chose {gameChoice}\n")
+                    whoWon(playerChoice,gameChoice, 0)
             elif(playerChoice == "Paper"):
                 if(gameChoice == "Scissors"):
-                    print(f"Game Wins: Player chose {playerChoice}, Game chose {gameChoice}\n")
+                    whoWon(playerChoice,gameChoice, 1)
                 else:
-                    print(f"Player wins: Player chose {playerChoice}, Game chose {gameChoice}\n")
+                    whoWon(playerChoice,gameChoice, 0)
             else:
                 if(gameChoice == "Rock"):
-                    print(f"Game Wins: Player chose {playerChoice}, Game chose {gameChoice}\n")
+                    whoWon(playerChoice,gameChoice, 1)
                 else:
-                    print(f"Player wins: Player chose {playerChoice}, Game chose {gameChoice}\n")
+                    whoWon(playerChoice,gameChoice, 0)
 
+# This is the code to choose who won the game
+def whoWon(player,game, won):
+    if(won == 1):
+        print(f"Game Wins: Player chose {player}, Game chose {game}")
+    else:
+        print(f"Player Wins: Player chose{player}, Game chose {game}")
+
+# This is the Menu to choose the game and choose to replay
 while (True):
     menuChoice = input("Press 1 for Rock,Paper,Scissors\nPress 2 to Quit\n: ")
     menuChoice = int(menuChoice)
     if menuChoice == 1:
-        RockPaperSissors()
+        RockPaperScissors()
     elif menuChoice == 2:
         break
     else:
