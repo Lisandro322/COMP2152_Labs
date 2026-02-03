@@ -146,3 +146,5 @@ for s in test_strings:
     counts = count_characters(s)
     print("  Character counts: " + str(counts))
     print()
+
+print("Added at end so I can recommit for screenshot")
