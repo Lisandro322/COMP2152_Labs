@@ -1,0 +1,4 @@
+2026-02-17 13:52:40,ping,google.com,N/A,Failed
+2026-02-17 13:53:05,nslookup,github.com,Not found,Failed
+2026-02-17 13:53:18,ifconfig,en0,Error,Failed
+2026-02-17 13:53:34,arp,local,0 devices,Captured
