@@ -70,7 +70,7 @@ def find_credential(website):
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute(
-        "Select * FROM vault WHERE website = ?", (website)
+        "Select * FROM vault WHERE website = ?", (website,)
     )
     rows = cursor.fetchall()
     conn.close()
