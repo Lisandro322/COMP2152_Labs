@@ -61,7 +61,7 @@ class PortScanner(Scanner):
 class HTTPScanner(Scanner):
     """Child class — scans HTTP paths for accessible pages."""
 
-    # TODO: Write __init__(self, target, paths)
+    # Write __init__(self, target, paths)
     #   Call the parent constructor: super().__init__(target)
     #   Store self.paths (a list of URL paths like "/", "/admin")
     def __init__(self, target, paths):
@@ -69,7 +69,7 @@ class HTTPScanner(Scanner):
         self.paths = paths
         
 
-    # TODO: Write scan(self)
+    # Write scan(self)
     #   Loop through self.paths
     #   For each path:
     #     Try: urllib.request.urlopen(f"http://{self.target}{path}")
